@@ -102,11 +102,10 @@
           <version>1.14</version>
       </dependency>
 
-      <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
       <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
-          <version>23.0</version>
+          <version>[24.1.1,)</version>
       </dependency>
 
 
