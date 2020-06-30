@@ -11,4 +11,4 @@
 * MAVEN
 
 ## 数据库环境
-* MySQL 5.8
+* MySQL 5.7

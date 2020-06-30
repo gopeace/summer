@@ -111,7 +111,7 @@ public class EventRecordServiceImpl implements EventRecordService {
         record.setEvent(addEventRecordAO.getEvent());
         record.setDesc(addEventRecordAO.getDesc());
         record.setUserId(addEventRecordAO.getUserId());
-        record.setScore(addEventRecordAO.getScore().getScore());
+        record.setScore(addEventRecordAO.getScore());
         record.setCreateTime(new Date());
         record.setCreateUser(addEventRecordAO.getUserId());
 

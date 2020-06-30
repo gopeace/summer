@@ -20,7 +20,7 @@ public class AddEventRecordAO implements Serializable {
     private String event;
     private String desc;
     @NotNull
-    private ScoreEnum score;
+    private Double score;
 
     public Integer getUserId() {
         return userId;
@@ -46,11 +46,11 @@ public class AddEventRecordAO implements Serializable {
         this.desc = desc;
     }
 
-    public ScoreEnum getScore() {
+    public Double getScore() {
         return score;
     }
 
-    public void setScore(ScoreEnum score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 

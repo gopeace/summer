@@ -5,7 +5,7 @@ CREATE TABLE `t_sys_user`  (
   `user_name` varchar(32) CHARACTER SET utf8mb4  COMMENT '用户名',
   `phone_number` varchar(15) NOT NULL COMMENT '手机号',
   `password` varchar(64) CHARACTER SET utf8mb4  DEFAULT NULL COMMENT '登录密码',
-  `salt` varchar(16) CHARACTER SET utf8mb4  DEFAULT NULL '密码加密使用的盐',
+  `salt` varchar(16) CHARACTER SET utf8mb4  DEFAULT NULL COMMENT '密码加密使用的盐',
   `status` tinyint(2) DEFAULT NULL COMMENT '0: 注销；1：正常',
   `create_time` datetime(0) DEFAULT NULL,
   `create_user` int(10) DEFAULT NULL,
