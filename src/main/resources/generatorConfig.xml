@@ -33,24 +33,40 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!--指定数据库表，要和数据库中进行对应，否则将会出错-->
-        <table tableName="t_sys_user"  domainObjectName="SysUser"
+        <!--<table tableName="t_sys_user"  domainObjectName="SysUser"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+
+        <!--<table tableName="t_sys_role"  domainObjectName="SysRole"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+
+        <!--<table tableName="t_sys_user_role"  domainObjectName="SysUserRole"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+
+        <!--<table tableName="t_event_record"  domainObjectName="EventRecord"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+
+        <table tableName="t_event_catagory"  domainObjectName="EventCatogory"
+            enableCountByExample="false" enableUpdateByExample="false"
+            enableDeleteByExample="false" enableSelectByExample="false"
+            selectByExampleQueryId="false"></table>
+
+        <table tableName="t_event_subclass"  domainObjectName="EventSubclass"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
 
-        <table tableName="t_sys_role"  domainObjectName="SysRole"
+        <table tableName="t_event_checkin"  domainObjectName="EventCheckin"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
 
-        <table tableName="t_sys_user_role"  domainObjectName="SysUserRole"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
-
-        <table tableName="t_event_record"  domainObjectName="EventRecord"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
-    </context>
+</context>
 </generatorConfiguration>

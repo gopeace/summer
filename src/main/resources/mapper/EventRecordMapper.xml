@@ -27,7 +27,7 @@
     id, event, user_id, desc, score, create_time, create_user, update_time, update_user
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_event_record
     where id = #{id,jdbcType=INTEGER}
@@ -35,7 +35,7 @@
 
   <select id="queryListByCondition" parameterType="com.season.model.QueryEventRecordCondition" resultMap="BaseResultMap">
     select
-      <include refid="Base_Column_List" />
+    <include refid="Base_Column_List" />
     from t_event_record
     <where>
       <include refid="queryRecordListCondition"/>
@@ -56,12 +56,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.season.model.EventRecord">
-    insert into t_event_record (id, event, user_id, 
-      desc, score, create_time, 
+    insert into t_event_record (id, event, user_id,
+      desc, score, create_time,
       create_user, update_time, update_user
       )
-    values (#{id,jdbcType=INTEGER}, #{event,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
-      #{desc,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, 
+    values (#{id,jdbcType=INTEGER}, #{event,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER},
+      #{desc,jdbcType=VARCHAR}, #{score,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP},
       #{createUser,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=INTEGER}
       )
   </insert>
