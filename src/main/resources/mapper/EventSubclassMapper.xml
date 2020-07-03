@@ -103,6 +103,10 @@
         #{isDeleted,jdbcType=BIT},
       </if>
     </trim>
+
+    <selectKey resultType="int" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS id FROM t_event_subclass LIMIT 1
+    </selectKey>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.season.model.EventSubclass">
     update t_event_subclass

@@ -86,6 +86,10 @@
         #{isDelete,jdbcType=BIT},
       </if>
     </trim>
+
+    <selectKey resultType="int" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS id FROM t_event_catagory LIMIT 1
+    </selectKey>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.season.model.EventCatogory">
     update t_event_catagory
@@ -125,4 +129,19 @@
       is_delete = #{isDelete,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="logicDeleteByPrimaryKey" parameterType="java.lang.Integer">
+    update t_event_catagory
+    set is_delete = 1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryList"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_event_catagory
+    order by id
+
+  </select>
+
 </mapper>

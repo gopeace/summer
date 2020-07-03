@@ -96,6 +96,10 @@
         #{remark,jdbcType=VARCHAR},
       </if>
     </trim>
+
+    <selectKey resultType="int" keyProperty="id">
+      SELECT LAST_INSERT_ID() AS id FROM t_event_checkin LIMIT 1
+    </selectKey>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.season.model.EventCheckin">
     update t_event_checkin
