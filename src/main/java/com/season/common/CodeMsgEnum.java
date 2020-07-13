@@ -15,6 +15,8 @@ public enum CodeMsgEnum {
     USER_NOT_EXIST(100005, "该用户不存在"),
     PASSWORD_ERROR(100006, "密码错误"),
     USER_LOGOFF(100007, "用户已注销"),
+    LOGIN_ERROR(100008, "登录失败"),
+    LOGOUT_ERROR(100009, "退出失败"),
 
     ADD_RECORD_ERROR(200001, "新增记录失败"),
     MODIFY_RECORD_ERROR(200002, "修改记录失败"),
