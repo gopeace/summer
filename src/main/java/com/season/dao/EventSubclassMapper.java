@@ -2,6 +2,8 @@ package com.season.dao;
 
 import com.season.model.EventSubclass;
 
+import java.util.List;
+
 public interface EventSubclassMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,8 @@ public interface EventSubclassMapper {
     int updateByPrimaryKeySelective(EventSubclass record);
 
     int updateByPrimaryKey(EventSubclass record);
+
+    int logicDeleteByPrimaryKey(Integer id);
+
+    List<EventSubclass> queryListByCatagoryId(Integer catagoryId);
 }

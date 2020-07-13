@@ -2,6 +2,9 @@ package com.season.model;
 
 import java.util.Date;
 
+/**
+ * 事件大类
+ */
 public class EventCatogory {
     private Integer id;
 
@@ -17,6 +20,9 @@ public class EventCatogory {
 
     private Integer updateUser;
 
+    /**
+     * 大类是否删除，采用逻辑删除
+     */
     private Boolean isDelete;
 
     public Integer getId() {

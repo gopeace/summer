@@ -2,6 +2,9 @@ package com.season.model;
 
 import java.util.Date;
 
+/**
+ * 事件登记记录
+ */
 public class EventCheckin {
     private Integer id;
 

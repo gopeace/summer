@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: season
  * @date: 2020/6/23 17:25
  */
+@Deprecated
 @RestController
 @RequestMapping("/user")
 public class UserController {

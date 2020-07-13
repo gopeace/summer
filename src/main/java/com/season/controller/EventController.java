@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
  * @author: season
  * @date: 2020/6/24 11:25
  */
+@Deprecated
 @RestController
 @RequestMapping("/event")
 public class EventController {

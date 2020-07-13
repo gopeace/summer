@@ -2,6 +2,7 @@ package com.season.model;
 
 import java.util.Date;
 
+@Deprecated
 public class EventRecord {
     private Integer id;
 

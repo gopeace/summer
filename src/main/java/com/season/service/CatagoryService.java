@@ -7,7 +7,7 @@ import com.season.entity.dto.CatagoryDTO;
 import java.util.List;
 
 /**
- * @decription:
+ * @decription: 事件大类服务
  * @author: season
  * @date: 2020/7/3 10:52
  */

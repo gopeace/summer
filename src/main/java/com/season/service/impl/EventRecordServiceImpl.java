@@ -24,6 +24,7 @@ import java.util.List;
  * @author: season
  * @date: 2020/6/24 13:47
  */
+@Deprecated
 @Service
 public class EventRecordServiceImpl implements EventRecordService {
     @Autowired

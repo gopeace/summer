@@ -154,4 +154,19 @@
       is_deleted = #{isDeleted,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="logicDeleteByPrimaryKey" parameterType="java.lang.Integer">
+    update t_event_subclass
+    set is_delete = 1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryListByCatagoryId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_event_subclass
+    where catagory_id = #{catagoryId,jdbcType=INTEGER}
+    order by id
+
+  </select>
 </mapper>

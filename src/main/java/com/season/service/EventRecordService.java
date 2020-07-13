@@ -12,6 +12,7 @@ import com.season.entity.dto.EventRecordDTO;
  * @author: season
  * @date: 2020/6/24 11:26
  */
+@Deprecated
 public interface EventRecordService {
     /**
      * 新增记录

@@ -2,6 +2,7 @@ package com.season.service.impl;
 
 import com.season.entity.UserInfoAO;
 import com.season.service.LoginService;
+import org.springframework.stereotype.Service;
 
 import javax.naming.Context;
 import javax.naming.directory.DirContext;
@@ -13,6 +14,7 @@ import java.util.Hashtable;
  * @author: season
  * @date: 2020/7/13 9:52
  */
+@Service
 public class LoginServiceImpl implements LoginService {
     /**
      * 此处以163邮箱为例，请更改为公司邮箱

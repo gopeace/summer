@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author: season
  * @date: 2020/7/13 9:59
  */
-@RequestMapping
+@RequestMapping("/verify/")
 @Controller
 public class LoginController {
     private static final String  USER_SESSION_NAME= "user";

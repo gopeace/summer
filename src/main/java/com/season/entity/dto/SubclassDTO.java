@@ -1,30 +1,25 @@
-package com.season.model;
+package com.season.entity.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 事件小类
+ * @decription:
+ * @author: zhixian.lin@luckincoffee.com
+ * @date: 2020/7/13 13:54
  */
-public class EventSubclass {
+public class SubclassDTO implements Serializable {
     private Integer id;
 
-    private String name;
-
-    private String desc;
-
     private Integer catagoryId;
-
-    private Float credit;
+    private String name;
+    private String desc;
+    private Double credit;
 
     private Date createTime;
-
     private Integer createUser;
-
     private Date updateTime;
-
     private Integer updateUser;
-
-    private Boolean isDeleted;
 
     public Integer getId() {
         return id;
@@ -32,22 +27,6 @@ public class EventSubclass {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
     }
 
     public Integer getCatagoryId() {
@@ -58,11 +37,27 @@ public class EventSubclass {
         this.catagoryId = catagoryId;
     }
 
-    public Float getCredit() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public Double getCredit() {
         return credit;
     }
 
-    public void setCredit(Float credit) {
+    public void setCredit(Double credit) {
         this.credit = credit;
     }
 
@@ -98,11 +93,18 @@ public class EventSubclass {
         this.updateUser = updateUser;
     }
 
-    public Boolean getIsDeleted() {
-        return isDeleted;
-    }
-
-    public void setIsDeleted(Boolean isDeleted) {
-        this.isDeleted = isDeleted;
+    @Override
+    public String toString() {
+        return "SubclassDTO{" +
+                "id=" + id +
+                ", catagoryId=" + catagoryId +
+                ", name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
+                ", credit=" + credit +
+                ", createTime=" + createTime +
+                ", createUser=" + createUser +
+                ", updateTime=" + updateTime +
+                ", updateUser=" + updateUser +
+                '}';
     }
 }
