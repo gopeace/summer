@@ -4,6 +4,7 @@ import com.season.common.CodeMsgEnum;
 import com.season.common.Result;
 import com.season.entity.UserInfoAO;
 import com.season.service.LoginService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RequestMapping("/verify/")
 @Controller
+@Slf4j
 public class LoginController {
     private static final String  USER_SESSION_NAME= "user";
 
@@ -35,7 +37,7 @@ public class LoginController {
                 throw new RuntimeException("账户或者密码有误!");
             }
         }catch (Exception e){
-            System.out.println("登录错误:" + e.getMessage());
+            log.error("登录错误:" + e.getMessage());
             return Result.error(CodeMsgEnum.LOGIN_ERROR);
         }
         return Result.success();
@@ -48,7 +50,7 @@ public class LoginController {
             //TODO：清空cookie, 使会话失效
             return Result.success();
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
             return Result.error(CodeMsgEnum.LOGOUT_ERROR);
         }
     }
