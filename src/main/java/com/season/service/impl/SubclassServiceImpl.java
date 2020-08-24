@@ -11,6 +11,7 @@ import com.season.service.SubclassService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.Date;
 import java.util.List;
@@ -27,6 +28,10 @@ public class SubclassServiceImpl implements SubclassService {
 
     @Override
     public Result<Integer> addSubclass(SubclassAO subclassAO) {
+        Assert.notNull(subclassAO.getCatagoryId(), "新建子类父类不能为空");
+        Assert.notNull(subclassAO.getName(), "子类名称不能为空");
+        Assert.isTrue(subclassAO.getCredit() != null && subclassAO.getCredit() > 0, "子类分值需要大于0");
+
         EventSubclass eventSubclass = convert(subclassAO, true);
 
         int subclassId = eventSubclassMapper.insertSelective(eventSubclass);
