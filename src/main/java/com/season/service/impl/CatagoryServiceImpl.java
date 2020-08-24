@@ -80,7 +80,7 @@ public class CatagoryServiceImpl implements CatagoryService {
             eventCatogory.setId(catagoryAO.getId());
         }
         eventCatogory.setName(catagoryAO.getName());
-        eventCatogory.setDesc(catagoryAO.getDesc());
+        eventCatogory.setDescription(catagoryAO.getDesc());
         if (created) {
             eventCatogory.setCreateTime(new Date());
             eventCatogory.setCreateUser(catagoryAO.getUserId());

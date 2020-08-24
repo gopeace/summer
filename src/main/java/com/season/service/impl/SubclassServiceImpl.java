@@ -80,7 +80,7 @@ public class SubclassServiceImpl implements SubclassService {
             eventSubclass.setId(subclassAO.getId());
         }
         eventSubclass.setName(subclassAO.getName());
-        eventSubclass.setDesc(subclassAO.getDesc());
+        eventSubclass.setDescription(subclassAO.getDesc());
         eventSubclass.setCatagoryId(subclassAO.getCatagoryId());
         eventSubclass.setCredit(subclassAO.getCredit());
 

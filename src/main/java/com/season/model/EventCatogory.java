@@ -10,7 +10,7 @@ public class EventCatogory {
 
     private String name;
 
-    private String desc;
+    private String description;
 
     private Date createTime;
 
@@ -41,12 +41,12 @@ public class EventCatogory {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
     }
 
     public Date getCreateTime() {

@@ -95,3 +95,8 @@ CREATE TABLE `t_event_checkin`  (
   `remark` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4;
+
+
+----------修改表字段-----------
+alter table t_event_catagory change `desc` `description` varchar(255) CHARACTER SET utf8mb4  DEFAULT NULL;
+alter table t_event_subclass change `desc` `description` varchar(255) CHARACTER SET utf8mb4  DEFAULT NULL;
