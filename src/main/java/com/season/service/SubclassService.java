@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @decription: 事件小类服务
- * @author: zhixian.lin@luckincoffee.com
+ * @author: season
  * @date: 2020/7/13 13:51
  */
 public interface SubclassService {

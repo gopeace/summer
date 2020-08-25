@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @decription:
- * @author: zhixian.lin@luckincoffee.com
+ * @author: season
  * @date: 2020/7/13 13:54
  */
 public class SubclassDTO implements Serializable {

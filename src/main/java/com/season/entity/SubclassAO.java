@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @decription:
- * @author: zhixian.lin@luckincoffee.com
+ * @author: season
  * @date: 2020/7/13 13:48
  */
 public class SubclassAO implements Serializable {
